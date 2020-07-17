@@ -1,0 +1,53 @@
+{
+  "day": {
+    "singular": "day",
+    "plural": "days"
+  }, 
+  "week": {
+    "singular": "week",
+    "plural": "weeks",
+    "weekDay": [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday"
+    ]
+  },
+  "month": {
+    "singular": "month",
+    "plural": "months",
+    "months": [
+      "january",
+      "february",
+      "march",
+      "april",
+      "may",
+      "june",
+      "july",
+      "august",
+      "september",
+      "october",
+      "november",
+      "december"
+    ]
+  }, 
+  "year": {
+    "singular": "year",
+    "plural": "years"
+  }, 
+  "hour": {
+    "singular": "hour",
+    "plural": "hours"
+  }, 
+  "minute": {
+    "singular": "minute",
+    "plural": "minutes"
+  }, 
+  "second": {
+    "singular": "second",
+    "plural": "seconds"
+  }
+}

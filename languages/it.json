@@ -1,0 +1,53 @@
+{
+  "day": {
+    "singular": "giorno",
+    "plural": "giorni"
+  }, 
+  "week": {
+    "singular": "settimana",
+    "plural": "settimane",
+    "weekDay": [
+      "domenica",
+      "lunedi",
+      "martedì",
+      "mercoledì",
+      "giovedi",
+      "venerdì",
+      "sabato"
+    ]
+  },
+  "month": {
+    "singular": "mese",
+    "plural": "mesi",
+    "months": [
+      "gennaio",
+      "febbraio",
+      "marzo",
+      "aprile",
+      "maggio",
+      "giugno",
+      "luglio",
+      "agosto",
+      "settembre",
+      "ottobre",
+      "novembre",
+      "dicembre"
+    ]
+  }, 
+  "year": {
+    "singular": "anno",
+    "plural": "anni"
+  }, 
+  "hour": {
+    "singular": "ora",
+    "plural": "ore"
+  }, 
+  "minute": {
+    "singular": "minuto",
+    "plural": "minuti"
+  }, 
+  "second": {
+    "singular": "secondo",
+    "plural": "secondi"
+  }
+}
