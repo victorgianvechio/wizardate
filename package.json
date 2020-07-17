@@ -1,6 +1,6 @@
 {
   "name": "wizardate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Wizardate provides a set of date formats for different locations. It allows you to create and register your own date formats and patterns.",
   "main": "./build/wizardate.js",
   "private": false,

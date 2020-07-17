@@ -3,6 +3,7 @@
 /* eslint-disable prefer-destructuring */
 
 import axios from 'axios';
+import { resolve } from 'path';
 import fs from 'fs';
 
 const Locale = {
@@ -122,7 +123,10 @@ class Wizardate {
     //   flag: 'r',
     // });
     const file = fs.readFileSync(
-      `${process.env.INIT_CWD}/node_modules/wizardate/languages/${language}.json`,
+      resolve(
+        process.env.INIT_CWD,
+        `node_modules/wizardate/languages/${language}.json`
+      ),
       {
         encoding: 'utf8',
         flag: 'r',
