@@ -185,7 +185,7 @@ wizardateEN.setDateFormat(BigEndian);
 
 // Using Format Pattern
 wizardateEN.registry('countryCodeAndDate', () => {
-  return date.formatPattern("'countryCode', 'date'");
+  return wizardateEN.formatPattern("'countryCode', 'date'");
 });
 
 console.log(wizardateEN.funcs.countryCodeAndDate()); // => BR, 2020-07-17
@@ -201,25 +201,25 @@ All functions below receive an **optional** date as a parameter. If no date is p
 **e.g.**:
 
 ```javascript
-date.getDateTime('2012-01-26T13:51:50.417-07:00') // => 26/01/2012 18:51:50
+wizardate.getDateTime('2012-01-26T13:51:50.417-07:00') // => 26/01/2012 18:51:50
 
-date.getTime('05/07/2019 08:54:32') // => 08:54:32
+wizardate.getTime('05/07/2019 08:54:32') // => 08:54:32
 
-date.getDate('October 15, 1996 05: 35: 32') // => 15/10/1996
+wizardate.getDate('October 15, 1996 05: 35: 32') // => 15/10/1996
 
-date.getExtendedWeekdayDate('2017-09-08T15:25:53Z') // => monday, 08 september 2017
+wizardate.getExtendedWeekdayDate('2017-09-08T15:25:53Z') // => monday, 08 september 2017
 
-date.getMonthNumber('05 October 2011 14:48 UTC') // => 10
+wizardate.getMonthNumber('05 October 2011 14:48 UTC') // => 10
 
-date.getDateTime('07/24/2015') // => 24/07/2018 00:00:00
+wizardate.getDateTime('07/24/2015') // => 24/07/2018 00:00:00
 
-date.getWeekday('05 October 2011 14:48 UTC') // => friday
+wizardate.getWeekday('05 October 2011 14:48 UTC') // => friday
 
-date.getExtendedTime('Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)' // => 11 hours 48 minutes 00 seconds
+wizardate.getExtendedTime('Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)' // => 11 hours 48 minutes 00 seconds
 
-date.getShortMonthYear('2011-10-05T14:48:00.000Z') // => out/2011
+wizardate.getShortMonthYear('2011-10-05T14:48:00.000Z') // => out/2011
 
-date.getDay('24HJERH87LK4') // => Invalid Date
+wizardate.getDay('24HJERH87LK4') // => Invalid Date
 ```
 
 If the date passed is invalid the functions will return **'Invalid Date'**.
@@ -229,7 +229,7 @@ If the date passed is invalid the functions will return **'Invalid Date'**.
 -   returns day **(1 ~ 31)**
 
 ```javascript
-let val = date.getDay() // => 17
+wizardate.getDay() // => 17
 ```
 
 ### getMonthNumber(date)
@@ -237,13 +237,13 @@ let val = date.getDay() // => 17
 -   returns month number **(1 ~ 12)**
 
 ```javascript
-let val = date.getMonthNumber() // => 7
+wizardate.getMonthNumber() // => 7
 ```
 
 ### getMonth(date)
 
 ```javascript
-let val = date.getMonth() // => july
+wizardate.getMonth() // => july
 ```
 
 | number | month     |
@@ -264,7 +264,7 @@ let val = date.getMonth() // => july
 ### getShortMonth(date)
 
 ```javascript
-let val = date.getShortMonth() // => jul
+wizardate.getShortMonth() // => jul
 ```
 
 | number | month |
@@ -285,13 +285,13 @@ let val = date.getShortMonth() // => jul
 ### getYear(date)
 
 ```javascript
-let val = date.getYear() // => 2020
+wizardate.getYear() // => 2020
 ```
 
 ### getShortYear(date)
 
 ```javascript
-let val = date.getShortYear('07/18/2019') // => 20
+wizardate.getShortYear('07/18/2019') // => 20
 ```
 
 ### getWeekdayNumber(date)
@@ -299,13 +299,13 @@ let val = date.getShortYear('07/18/2019') // => 20
 -   returns the number of the week **(1 a 7)**
 
 ```javascript
-let val = date.getWeekdayNumber() // => 5
+wizardate.getWeekdayNumber() // => 5
 ```
 
 ### getWeekday(date)
 
 ```javascript
-let val = date.getWeekday() // => friday
+wizardate.getWeekday() // => friday
 ```
 
 | number | weekday   |
@@ -321,7 +321,7 @@ let val = date.getWeekday() // => friday
 ### getShortWeekday(date)
 
 ```javascript
-let val = date.getShortWeekday() // => fri
+wizardate.getShortWeekday() // => fri
 ```
 
 | number | weekday |
@@ -337,43 +337,43 @@ let val = date.getShortWeekday() // => fri
 ### getDate(date)
 
 ```javascript
-let val = date.getDate() // => 17/07/2020
+wizardate.getDate() // => 17/07/2020
 ```
 
 ### getExtendedDate(date)
 
 ```javascript
-let val = date.getExtendedDate() // => 17 july 2020
+wizardate.getExtendedDate() // => 17 july 2020
 ```
 
 ### getExtendedWeekdayDate(date)
 
 ```javascript
-let val = date.getExtendedWeekdayDate() // => friday, 17 july 2020
+wizardate.getExtendedWeekdayDate() // => friday, 17 july 2020
 ```
 
 ### getMonthNumberYear(date)
 
 ```javascript
-let val = date.getMonthNumberYear() // => 07/2020
+wizardate.getMonthNumberYear() // => 07/2020
 ```
 
 ### getMonthYear(date)
 
 ```javascript
-let val = date.getMonthYear() // => july/2020
+wizardate.getMonthYear() // => july/2020
 ```
 
 ### getShortMonthYear(date)
 
 ```javascript
-let val = date.getShortMonthYear() // => jul/2020
+wizardate.getShortMonthYear() // => jul/2020
 ```
 
 ### getShortMonthShortYear(date)
 
 ```javascript
-let val = date.getShortMonthYear() // => jul/20
+wizardate.getShortMonthYear() // => jul/20
 ```
 
 ### getHour(date)
@@ -381,13 +381,13 @@ let val = date.getShortMonthYear() // => jul/20
 -   return hours **(1 a 23)**
 
 ```javascript
-let val = date.getHour() // => 8
+wizardate.getHour() // => 8
 ```
 
 ### getExtendedHour(date)
 
 ```javascript
-let val = date.getExtendedHour() // => 08 hours
+wizardate.getExtendedHour() // => 08 hours
 ```
 
 ### getMinute(date)
@@ -395,13 +395,13 @@ let val = date.getExtendedHour() // => 08 hours
 -   return minutes **(1 a 59)**
 
 ```javascript
-let val = date.getMinute() // => 53
+wizardate.getMinute() // => 53
 ```
 
 ### getExtendedMinute(date)
 
 ```javascript
-let val = date.getExtendedMinute() // => 53 minutes
+wizardate.getExtendedMinute() // => 53 minutes
 ```
 
 ### getSecond(date)
@@ -409,49 +409,49 @@ let val = date.getExtendedMinute() // => 53 minutes
 -   returns seconds **(1 a 59)**
 
 ```javascript
-let val = date.getSecond() // => 32
+wizardate.getSecond() // => 32
 ```
 
 ### getExtendedSecond(date)
 
 ```javascript
-let val = date.getExtendedSecond() // => 32 seconds
+wizardate.getExtendedSecond() // => 32 seconds
 ```
 
 ### getTime(date)
 
 ```javascript
-let val = date.getTime() // => 08:53:32
+wizardate.getTime() // => 08:53:32
 ```
 
 ### getExtendedTime(date)
 
 ```javascript
-let val = date.getExtendedTime() // => 08 hours 53 minutes 32 seconds
+wizardate.getExtendedTime() // => 08 hours 53 minutes 32 seconds
 ```
 
 ### getHourMinute(date)
 
 ```javascript
-let val = date.getHourMinute() // => 08:53
+wizardate.getHourMinute() // => 08:53
 ```
 
 ### getExtendedHourMinute(date)
 
 ```javascript
-let val = date.getExtendedHourMinute() // => 08 hours 53 minutes
+wizardate.getExtendedHourMinute() // => 08 hours 53 minutes
 ```
 
 ### getDateTime(date)
 
 ```javascript
-let val = date.getDateTime() // => 17/06/2020 08:53:32
+wizardate.getDateTime() // => 17/06/2020 08:53:32
 ```
 
 ### getExtendedDateTime(date)
 
 ```javascript
-let val = date.getExtendedDateTime() // => 17 july 2020 08 hours 53 minutes 32 seconds
+wizardate.getExtendedDateTime() // => 17 july 2020 08 hours 53 minutes 32 seconds
 ```
 
 ### getExtendedCityDate(date)
@@ -459,7 +459,7 @@ let val = date.getExtendedDateTime() // => 17 july 2020 08 hours 53 minutes 32 s
 _asynchronous function_
 
 ```javascript
-let val = await date.getExtendedCityDate() // =>  Marília, 17 july 2020
+await wizardate.getExtendedCityDate() // =>  Marília, 17 july 2020
 ```
 
 ### getExtendedRegionDate(date)
@@ -467,7 +467,7 @@ let val = await date.getExtendedCityDate() // =>  Marília, 17 july 2020
 _asynchronous function_
 
 ```javascript
-let val = await date.getExtendedRegionDate() // =>  São Paulo, 17 july 2020
+await wizardate.getExtendedRegionDate() // =>  São Paulo, 17 july 2020
 ```
 
 ### getExtendedRegionCodeDate(date)
@@ -475,7 +475,7 @@ let val = await date.getExtendedRegionDate() // =>  São Paulo, 17 july 2020
 _asynchronous function_
 
 ```javascript
-let val = await date.getExtendedRegionCodeDate() // =>  SP, 17 july 2020
+await wizardate.getExtendedRegionCodeDate() // =>  SP, 17 july 2020
 ```
 
 ### getExtendedCountryDate(date)
@@ -483,7 +483,7 @@ let val = await date.getExtendedRegionCodeDate() // =>  SP, 17 july 2020
 _asynchronous function_
 
 ```javascript
-let val = await date.getExtendedCountryDate() // =>  Brazil, 17 july 2020
+await wizardate.getExtendedCountryDate() // =>  Brazil, 17 july 2020
 ```
 
 ### getExtendedCountryCodeDate(date)
@@ -491,7 +491,7 @@ let val = await date.getExtendedCountryDate() // =>  Brazil, 17 july 2020
 _asynchronous function_
 
 ```javascript
-let val = await date.getExtendedCountryCodeDate() // =>  BR, 17 july 2020
+await wizardate.getExtendedCountryCodeDate() // =>  BR, 17 july 2020
 ```
 
 ## Current Locale Functions
@@ -503,7 +503,7 @@ All functions bellow are _asynchronous_ and returns current locale informations.
 _asynchronous function_
 
 ```javascript
-let val = await date.getCity() // => Marília
+await wizardate.getCity() // => Marília
 ```
 
 ### getRegion()
@@ -511,7 +511,7 @@ let val = await date.getCity() // => Marília
 _asynchronous function_
 
 ```javascript
-let val = await date.getRegion() // => São Paulo
+await wizardate.getRegion() // => São Paulo
 ```
 
 ### getRegionCode()
@@ -519,7 +519,7 @@ let val = await date.getRegion() // => São Paulo
 _asynchronous function_
 
 ```javascript
-let val = await date.getRegionCode() // => SP
+await wizardate.getRegionCode() // => SP
 ```
 
 ### getCountry()
@@ -527,7 +527,7 @@ let val = await date.getRegionCode() // => SP
 _asynchronous function_
 
 ```javascript
-let val = await date.getCountry() // => Brazil
+await wizardate.getCountry() // => Brazil
 ```
 
 ### getCountryCode()
@@ -535,7 +535,7 @@ let val = await date.getCountry() // => Brazil
 _asynchronous function_
 
 ```javascript
-let val = await date.getCountryCode() // => BR
+await wizardate.getCountryCode() // => BR
 ```
 
 ### getTimezone()
@@ -543,7 +543,7 @@ let val = await date.getCountryCode() // => BR
 _asynchronous function_
 
 ```javascript
-let val = await date.getTimezone() // => America/Sao_Paulo
+await wizardate.getTimezone() // => America/Sao_Paulo
 ```
 
 ### getZipcode()
@@ -551,7 +551,7 @@ let val = await date.getTimezone() // => America/Sao_Paulo
 _asynchronous function_
 
 ```javascript
-let val = await date.getZipcode() // => 17350-000
+await wizardate.getZipcode() // => 17350-000
 ```
 
 ## Format Pattern
@@ -614,7 +614,11 @@ Use patterns to create your date format
 -   {string} **pattern** - string patter
 -   {string} **date** - accepts various formats _(optional)_
 
+```javascript
+const myPattern = "'MMM' 'yyyy' - My Pattern"
 
+wizardate.formatPattern(myPattern); // => Jul 2020 - My Pattern
+```
 
 ## Changelog
 
