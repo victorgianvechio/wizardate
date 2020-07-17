@@ -19,7 +19,7 @@ Wizardate provides a set of date formats for different locations. It allows you 
     -   [setDefaultConfig()](#setdefaultconfig)
     -   [setDateFormat(dateFormat)](#setDateFormatdateFormat)
 -   [Registry Function](#registry-function)
-    -   [registry(funcName, func)](#registryfuncNamefunc)
+    -   [registry(funcName, func)](#registryfuncname-func)
 -   [Date Functions](#date-functions)
     -   [getDay(date)](#getdaydate)
     -   [getMonthNumber(date)](#getmonthnumberdate)
@@ -50,17 +50,19 @@ Wizardate provides a set of date formats for different locations. It allows you 
     -   [getExtendedDateTime(date)](#getextendeddatetimedate)
     -   [getExtendedCityDate(date)](#getextendedcitydatedate)
     -   [getExtendedRegionDate(date)](#getextendedregiondatedate)
-    -   [getExtendedShortRegionDate(date)](#getextendedshortregiondatedate)
+    -   [getExtendedRegionCodeDate(date)](#getextendedregioncodedatedate)
     -   [getExtendedCountryDate(date)](#getextendedcountrydatedate)
-    -   [getExtendedShortCountryDate(date)](#getextendedshortcountrydatedate)
+    -   [getExtendedCountryCodeDate(date)](#getextendedcountrycodedatedate)
 -   [Current Locale Functions](#current-locale-functions)
     -   [getCity()](#getcity)
     -   [getRegion()](#getregion)
-    -   [getShortRegion()](#getshortregion)
+    -   [getRegionCode()](#getregioncode)
     -   [getCountry()](#getcountry)
-    -   [getShortCountry()](#getshortcountry)
+    -   [getCountryCode()](#getcountrycode)
     -   [getTimezone()](#gettimezone)
     -   [getZipcode()](#getzipcode)
+-   [Format Pattern](#format-pattern)
+    -   [formatPattern(pattern, date)](#formatPatternpattern-date)
 -   [Changelog](#changelog)
 -   [License](#license)
 
@@ -553,6 +555,66 @@ let val = await date.getZipcode() // => 17350-000
 ```
 
 ## Format Pattern
+
+Use patterns to create your date format
+
+| pattern       | output      | desc                                    |
+| :------------ | :---------- | :-------------------------------------- |
+| 'date'        | 17/07/2020  | full date                               |
+| 'time'        | 16:09:30    | full time                               |
+| 'd'           | 3           | day withou zero                         |
+| 'dd'          | 03          | day with zero                           |
+| 'm'           | 7           | month without zero                      |
+| 'mm'          | 07          | month with zero                         |
+| 'mmm'         | jul         | short month                             |
+| 'mmmm'        | july        | month                                   |
+| 'MMM'         | Jul         | capitalize short month                  |
+| 'MMMM'        | July        | capitalize month                        |
+| 'yy'          | 20          | short year                              |
+| 'yyyy'        | 2020        | year                                    |
+| 'w'           | 6           | weekday withou zero                     |
+| 'ww'          | 06          | weekday with zero                       |
+| 'www'         | fri         | short weekday                           |
+| 'wwww'        | friday      | weekday                                 |
+| 'WWW'         | Fri         | capitalize short weekday                |
+| 'WWWW'        | Friday      | capitalize weekday                      |
+| 'h'           | 5           | hour without zero                       |
+| 'hh'          | 05          | hour with zero                          |
+| 'hhh'         | 5 hour      | hour without zero and desc              |
+| 'hhhh'        | 05 hour     | hour with zero and desc                 |
+| 'HHH'         | 5 Hour      | hour without zero and capitalize desc   |
+| 'HHHH'        | 05 Hour     | hour with zero and capitalize desc      |
+| 'i'           | 7           | minute without zero                     |
+| 'ii'          | 07          | minute with zero                        |
+| 'iii'         | 7 minutes   | minute without zero and desc            |
+| 'iiii'        | 07 minutes  | minute with zero and desc               |
+| 'III'         | 7 Minutes   | minute without zero and capitalize desc |
+| 'IIII'        | 07 Minutes  | minute with zero and capitalize desc    |
+| 's'           | 1           | second without zero                     |
+| 'ss'          | 01          | second with zero                        |
+| 'sss'         | 1 second    | second without zero and desc            |
+| 'ssss'        | 01 second   | second with zero and desc               |
+| 'SSS'         | 1 Second    | second without zero and capitalize desc |
+| 'SSSS'        | 01 Second   | second with zero and capitalize desc    |
+| 'city'        | Marília     | city                                    |
+| 'region'      | Sao Paulo   | region                                  |
+| 'regionCode'  | SP          | region code                             |
+| 'country'     | Brazil      | country                                 |
+| 'countryCode' | BR          | country code                            |
+
+**Formats available only for pt_BR**
+
+| pattern       | output      | desc                                    |
+| :------------ | :---------- | :-------------------------------------- |
+| 'wwwww'       | sexta-feira | weekday                                 |
+| 'WWWWW'       | Sexta-feira | capitalize weekday                      |
+
+### formatPattern(pattern, date)
+
+-   {string} **pattern** - string patter
+-   {string} **date** - accepts various formats _(optional)_
+
+
 
 ## Changelog
 
