@@ -62,7 +62,7 @@ Wizardate provides a set of date formats for different locations. It allows you 
     -   [getTimezone()](#gettimezone)
     -   [getZipcode()](#getzipcode)
 -   [Format Pattern](#format-pattern)
-    -   [formatPattern(pattern, date)](#formatPatternpattern-date)
+    -   [formatPattern(pattern, date)](#formatpatternpattern-date)
 -   [Changelog](#changelog)
 -   [License](#license)
 
@@ -601,6 +601,7 @@ Use patterns to create your date format
 | 'regionCode'  | SP          | region code                             |
 | 'country'     | Brazil      | country                                 |
 | 'countryCode' | BR          | country code                            |
+
 
 **Formats available only for pt_BR**
 

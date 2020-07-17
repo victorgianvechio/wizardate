@@ -117,10 +117,17 @@ class Wizardate {
   }
 
   translate(language) {
-    const file = fs.readFileSync(`./languages/${language}.json`, {
-      encoding: 'utf8',
-      flag: 'r',
-    });
+    // const file = fs.readFileSync(`./languages/${language}.json`, {
+    //   encoding: 'utf8',
+    //   flag: 'r',
+    // });
+    const file = fs.readFileSync(
+      `${process.env.INIT_CWD}/node_modules/wizardate/languages/${language}.json`,
+      {
+        encoding: 'utf8',
+        flag: 'r',
+      }
+    );
     // const decodedFile = decoder.decode(file);
     const data = JSON.parse(file);
 
