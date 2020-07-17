@@ -18,7 +18,8 @@ Wizardate provides a set of date formats for different locations. It allows you 
     -   [config(object)](#configobject)
     -   [setDefaultConfig()](#setdefaultconfig)
     -   [setDateFormat(dateFormat)](#setDateFormatdateFormat)
-    [Registry Function](#registry-function)
+-   [Registry Function](#registry-function)
+    -   [registry(funcName, func)](#registryfuncNamefunc)
 -   [Date Functions](#date-functions)
     -   [getDay(date)](#getdaydate)
     -   [getMonthNumber(date)](#getmonthnumberdate)
@@ -78,9 +79,11 @@ wizardate.getDate(); // => 17/07/2020
 
 ### Date Formats
 
--- **LittleEndian** - dd/mm/yyyy or 22 April 2006
--- **MiddleEndian** - mm/dd/yyyy or April 22 2006
--- **BigEndian** - yyyy/mm/dd or 2006 April 22
+-    **LittleEndian** - dd/mm/yyyy or 22 April 2006
+
+-    **MiddleEndian** - mm/dd/yyyy or April 22 2006
+
+-    **BigEndian** - yyyy/mm/dd or 2006 April 22
 
 ### Locales
 
@@ -232,13 +235,13 @@ let val = date.getDay() // => 17
 -   returns month number **(1 ~ 12)**
 
 ```javascript
-let val = date.getMonthNumber() // => 06
+let val = date.getMonthNumber() // => 7
 ```
 
 ### getMonth(date)
 
 ```javascript
-let val = date.getMonth() // => June
+let val = date.getMonth() // => july
 ```
 
 | number | month     |
@@ -259,7 +262,7 @@ let val = date.getMonth() // => June
 ### getShortMonth(date)
 
 ```javascript
-let val = date.getShortMonth() // => Jun
+let val = date.getShortMonth() // => jul
 ```
 
 | number | month |
@@ -316,7 +319,7 @@ let val = date.getWeekday() // => friday
 ### getShortWeekday(date)
 
 ```javascript
-let val = date.getWeekday() // => fri
+let val = date.getShortWeekday() // => fri
 ```
 
 | number | weekday |
