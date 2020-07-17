@@ -1,6 +1,6 @@
 {
   "name": "wizardate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wizardate provides a set of date formats for different locations. It allows you to create and register your own date formats and patterns.",
   "main": "./build/wizardate.js",
   "private": false,
@@ -56,10 +56,8 @@
     "url": "https://github.com/victorgianvechio/wizardate.git"
   },
   "scripts": {
-    "dev": "nodemon src/server.js",
     "eslint:fix": "eslint --fix src --ext .js",
     "build": "babel src -d build",
-    "start": "node build/server.js",
     "test": "sucrase-node test.js"
   },
   "engineStrict": true,
